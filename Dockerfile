@@ -1,6 +1,6 @@
 # Base image to future reuse under nested images
 
-FROM ubuntu:latest
+FROM ubuntu:13.10
 MAINTAINER Sergey Shkolin <sergey@shkolin.net.ua>
 
 ENV DEBIAN_FRONTEND noninteractive
