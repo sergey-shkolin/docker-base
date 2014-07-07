@@ -1,6 +1,6 @@
 # Base image to future reuse under nested images
 
-FROM ubuntu:13.10
+FROM ubuntu:14.04
 MAINTAINER Sergey Shkolin <sergey@shkolin.net.ua>
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -10,7 +10,7 @@ RUN apt-get update -qq
 RUN apt-get -yqq upgrade
 
 # Required packages
-RUN apt-get install -y software-properties-common vim htop zip wget curl
+RUN apt-get install -y software-properties-common vim zip wget curl
 
 RUN echo ${LOCAL_TIMEZONE:-Europe/Kiev} > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
