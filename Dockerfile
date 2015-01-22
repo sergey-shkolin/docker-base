@@ -8,7 +8,7 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get update -qq ; \
     apt-get -yqq upgrade
 
-RUN apt-get install -y software-properties-common vim upzip wget curl
+RUN apt-get install -y software-properties-common vim unzip wget curl
 
 RUN apt-get autoremove -y ; \
     apt-get clean install
